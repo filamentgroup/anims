@@ -3,7 +3,7 @@
 	100% { transform: translateY(0); }
 }
 @keyframes moveX {
-	0%   { translateX(var(--distance)); }
+	0%   { transform: translateX(var(--distance)); }
 	100% { transform: translateX(0); }
 }
 @keyframes rotate {
