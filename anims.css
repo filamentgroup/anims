@@ -1,5 +1,5 @@
 @keyframes moveY {
-	0%   { transform: translateY(var(--distance)); }
+  0%   { transform: translateY(var(--distance)); }
   100% { transform: translateY(0); }
 }
 @keyframes moveX {
@@ -15,7 +15,7 @@
   100% { opacity: 1; }
 }
 .move {
-	--duration: 1s;
+  --duration: 1s;
   --delay: 0;
   --fadeDuration: 2s;
   --fadeDelay: var(--delay) ;
