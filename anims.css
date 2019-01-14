@@ -17,6 +17,7 @@
 .move {
 	--duration: 1s;
 	--delay: 0;
+	--easing: ease-in-out;
 	--fadeDuration: 2s;
 	--fadeDelay: var(--delay) ;
 	--iteration: 1;
@@ -24,17 +25,17 @@
 }
 .moveX {
 	--distance: 100%;
-	animation: moveX var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+	animation: moveX var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
 		fade var(--fadeDuration) var(--fadeDelay) 1 both;
 }
 .moveY {
 	--distance: 100%;
-	animation: moveY var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+	animation: moveY var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
 		fade var(--fadeDuration) var(--fadeDelay) 1 both;
 }
 .moveRotate {
 	--rotation: -15deg;
-	animation: rotate var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+	animation: rotate var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
 		fade var(--fadeDuration) var(--fadeDelay) 1 both;
 }
 .moveLoop {
@@ -44,4 +45,5 @@
 .moveRepeat {
 	--iteration: infinite;
 	--direction: normal;
+	--easing: linear;
 }
