@@ -17,8 +17,9 @@ If you don't want the element to fade in, set `--fadeDuration: 0;` on it via CSS
 ## animation classes:
 - `moveX`: move vertically (100% of element width is default distance. Override with `--distance` var)
 - `moveY`: move vertically (100% of element height is default distance. Override with `--distance` var)
-- `moveRotate`: rotate element on center axis. Positive numbers are clockwise. (15deg is default rotation. Override with `--rotation` var)
+- `moveRotate`: rotate element from center. Positive numbers are clockwise. (15deg is default rotation. Override with `--rotation` var)
 
+Note: The transform origin is `transform-origin: 50% 50%;`, the center point, for rotations, but if you're animating svg elements, that center point refers to the center of the whole svg rather than the element itself. You can set `transform-origin` to a location in the svg graphic where you need it to accommodate this difference.
 
 ## options available to set via css on the element (default values shown):
 
@@ -38,6 +39,8 @@ If you don't want the element to fade in, set `--fadeDuration: 0;` on it via CSS
 
 ## examples
 
+more here https://codepen.io/anon/pen/MZLoQa?editors=1000 
+
 paragraph sliding back and forth 25px horizontally:
 ```html
 <p class="move moveX moveLoop" style="--distance: 25px; --duration: 1s">...</p>
@@ -45,7 +48,7 @@ paragraph sliding back and forth 25px horizontally:
  
 div rotating endlessly:
 ```html
-<p class="move moveRotate moveRepeat" style="--rotation: 360deg; --duration: 4s">...</p>
+<p class="move moveRotate moveRepeat" style="--rotation: 360deg; transform-origin: 50% 50%; --duration: 4s">...</p>
  ```
 
 
