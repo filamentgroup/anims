@@ -35,6 +35,7 @@
 }
 .moveRotate {
 	--rotation: -15deg;
+	transform-origin: 50% 50%;
 	animation: rotate var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
 		fade var(--fadeDuration) var(--fadeDelay) 1 both;
 }
