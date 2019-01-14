@@ -16,7 +16,7 @@
 }
 .move {
 	--duration: 1s;
-	--delay: 0;
+	--delay: 0s;
 	--easing: ease-in-out;
 	--fadeDuration: 2s;
 	--fadeDelay: var(--delay) ;
