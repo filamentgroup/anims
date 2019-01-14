@@ -1,0 +1,47 @@
+@keyframes moveY {
+	0%   { transform: translateY(var(--distance)); }
+  100% { transform: translateY(0); }
+}
+@keyframes moveX {
+  0%   { translateX(var(--distance)); }
+  100% { transform: translateX(0); }
+}
+@keyframes rotate {
+  0%   { transform: rotate(var(--rotation)); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes fade {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+.move {
+	--duration: 1s;
+  --delay: 0;
+  --fadeDuration: 2s;
+  --fadeDelay: var(--delay) ;
+  --iteration: 1;
+  --direction: alternate;
+}
+.moveX {
+  --distance: 100%;
+  animation: moveX var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+    fade var(--fadeDuration) var(--fadeDelay) 1 both;
+}
+.moveY {
+  --distance: 100%;
+  animation: moveY var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+    fade var(--fadeDuration) var(--fadeDelay) 1 both;
+}
+.moveRotate {
+  --rotation: -15deg;
+  animation: rotate var(--duration) var(--delay) var(--iteration) ease-in-out both var(--direction),
+    fade var(--fadeDuration) var(--fadeDelay) 1 both;
+}
+.moveLoop {
+  --iteration: infinite;
+  --direction: alternate;
+}
+.moveRepeat {
+  --iteration: infinite;
+  --direction: normal;
+}
