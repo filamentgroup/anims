@@ -6,9 +6,17 @@
 	0%   { transform: translateX(var(--distance)); }
 	100% { transform: translateX(0); }
 }
+@keyframes moveXY {
+	0%   { transform: translateY(var(--distance)) translateX(var(--distanceX)); }
+	100% { transform: translateY(0) translateX(0); }
+}
 @keyframes rotate {
 	0%   { transform: rotate(var(--rotation)); }
 	100% { transform: rotate(0deg); }
+}
+@keyframes scale {
+	0%   { transform: scale(var(--scale)); }
+	100% { transform: scale(1); }
 }
 @keyframes fade {
 	0%   { opacity: 0; }
@@ -22,22 +30,34 @@
 	--fadeDelay: var(--delay) ;
 	--iteration: 1;
 	--direction: alternate;
+	--playstate: running;
+	transform-origin: 50% 50%;
 }
 .moveX {
 	--distance: 100%;
 	animation: moveX var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
-		fade var(--fadeDuration) var(--fadeDelay) 1 both;
+		fade var(--fadeDuration) var(--fadeDelay) 1 both var( --playstate);
 }
 .moveY {
 	--distance: 100%;
 	animation: moveY var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
-		fade var(--fadeDuration) var(--fadeDelay) 1 both;
+		fade var(--fadeDuration) var(--fadeDelay) 1 both var( --playstate);
+}
+.moveXY {
+	--distance: 100%;
+	--distanceX: 100%;
+	animation: moveXY var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
+		fade var(--fadeDuration) var(--fadeDelay) 1 both var( --playstate);
 }
 .moveRotate {
 	--rotation: -15deg;
-	transform-origin: 50% 50%;
 	animation: rotate var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
-		fade var(--fadeDuration) var(--fadeDelay) 1 both;
+		fade var(--fadeDuration) var(--fadeDelay) 1 both var( --playstate);
+}
+.moveScale {
+	--scale: 1.4;
+	animation: scale var(--duration) var(--delay) var(--iteration) var(--easing) both var(--direction),
+		fade var(--fadeDuration) var(--fadeDelay) 1 both var( --playstate);
 }
 .moveLoop {
 	--iteration: infinite;
@@ -47,4 +67,13 @@
 	--iteration: infinite;
 	--direction: normal;
 	--easing: linear;
+}
+.movePaused {
+	--playstate: running;
+}
+@media (prefers-reduced-motion: reduce) {
+	.move {
+		animation: none !important;
+		transition: none !important;
+	}
 }
