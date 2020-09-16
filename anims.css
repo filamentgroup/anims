@@ -1,3 +1,6 @@
+/* anims css -  Just some CSS utilities for build and loop animations. 
+MIT @scottjehl, @filamentgroup */
+
 @keyframes moveY {
 	0%   { transform: translateY(var(--distance)); }
 	100% { transform: translateY(0); }
