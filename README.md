@@ -22,6 +22,8 @@ If you don't want the element to fade in, set `--fadeDuration: 0;` on it via CSS
 - `moveX`: move vertically (100% of element width is default distance. Override with `--distance` var)
 - `moveY`: move vertically (100% of element height is default distance. Override with `--distance` var)
 - `moveRotate`: rotate element from center. Positive numbers are clockwise. (15deg is default rotation. Override with `--rotation` var)
+- `moveXY`: move x and y at once. Override with `--distance` and `--distanceX` vars
+- `moveScale`: scale from an amt to 1. Default is to start at 1.4 scale. Override with `--scale` var.
 
 Note: The transform origin is `transform-origin: 50% 50%;`, the center point, for rotations, but if you're animating svg elements, that center point refers to the center of the whole svg rather than the element itself. You can set `transform-origin` to a location in the svg graphic where you need it to accommodate this difference.
 
@@ -35,11 +37,16 @@ Note: The transform origin is `transform-origin: 50% 50%;`, the center point, fo
 --fadeDelay: var(--delay); / duration of the  */
 --iteration: 1; /* how many times the move or rotate animation should run. if it's infinite, use a repeat class below */
 --direction: alternate; /* when repeating, should it go back and forth or "normal". if infinite, use a repeat class below */ 
+	--playstate: running; /* change to paused to pause */
 ```
 
 ## animation repeat classes:
 - `moveRepeat`: repeat animation infinitely from the start (good for spinning)
 - `moveLoop`: repeat animation infinitely back and forth (good for pendulum)
+
+## Built-in Support for Prefers-reduced-motion
+
+If a user has set their preferences to prefer reduce motion, these animations will disable. If you rely on transition or animation events, you might want to override these to have an extremely short duration instead of merely disabling them.
 
 ## examples
 
