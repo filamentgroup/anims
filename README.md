@@ -1,6 +1,10 @@
 # anims
 
-css foundation for build and loop animations.  
+Just some CSS utilities for build and loop animations.  
+
+![demo of animation css in effect at filamentgroup.com](https://user-images.githubusercontent.com/214783/93365193-7d661600-f817-11ea-9ba7-fbf261d6961b.gif)
+
+[See anims css in effect at filamentgroup.com](https://www.filamentgroup.com)
 
 ## Basic usage:
 
@@ -39,7 +43,8 @@ Note: The transform origin is `transform-origin: 50% 50%;`, the center point, fo
 
 ## examples
 
-more here https://codepen.io/anon/pen/MZLoQa?editors=1000 
+[quick codepen]https://codepen.io/scottjehl/pen/OJNwedM)
+
 
 paragraph sliding back and forth 25px horizontally:
 ```html
