@@ -19,7 +19,7 @@ By default, all animations start by fading in from 0 opacity to 1. Even looping 
 If you don't want the element to fade in, set `--fadeDuration: 0;` on it via CSS.
 
 ## animation classes:
-- `moveX`: move vertically (100% of element width is default distance. Override with `--distance` var)
+- `moveX`: move horizontally (100% of element width is default distance. Override with `--distance` var)
 - `moveY`: move vertically (100% of element height is default distance. Override with `--distance` var)
 - `moveRotate`: rotate element from center. Positive numbers are clockwise. (15deg is default rotation. Override with `--rotation` var)
 - `moveXY`: move x and y at once. Override with `--distance` and `--distanceX` vars
@@ -50,7 +50,7 @@ If a user has set their preferences to prefer reduce motion, these animations wi
 
 ## examples
 
-[quick codepen]https://codepen.io/scottjehl/pen/OJNwedM)
+[quick codepen](https://codepen.io/scottjehl/pen/OJNwedM)
 
 
 paragraph sliding back and forth 25px horizontally:
