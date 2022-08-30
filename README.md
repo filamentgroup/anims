@@ -1,3 +1,5 @@
+:warning: This project is archived and the repository is no longer maintained. 
+
 # anims
 
 Just some CSS utilities for build and loop animations.  
